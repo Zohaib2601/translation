@@ -206,7 +206,7 @@ runSpeechRecog = () => {
 
     // let code = "";
     for (let i = 0; i < countries.length; i++) {
-      if (selected[1].innerHTML === countries[i].n1) {
+      if (selected[0].innerHTML === countries[i].n1) {
         code = countries[i].c1;
         break; // Once found, exit the loop
       }
