@@ -32,7 +32,7 @@ dropdowns.forEach((dropdown) => {
       const selected = dropdown.querySelector(".selected");
       selected.innerHTML = item.innerHTML;
       selected.dataset.value = item.dataset.value;
-      translate();
+      // translate(); //CHECK : REMOVE AND ADD BUTTON
     });
   });
 });
@@ -64,7 +64,7 @@ swapBtn.addEventListener("click", (e) => {
   inputTextElem.value = outputTextElem.value;
   outputTextElem.value = tempInputText;
 
-  translate();
+  // translate(); //REMOVE AND ADD BUTTON
 });
 
 function translate() {
@@ -91,7 +91,7 @@ inputTextElem.addEventListener("input", (e) => {
   if (inputTextElem.value.length > 5000) {
     inputTextElem.value = inputTextElem.value.slice(0, 5000);
   }
-  translate();
+  // translate(); //REMOVE AND ADD BUTTON
 });
 
 const uploadDocument = document.querySelector("#upload-document"),
@@ -111,7 +111,7 @@ uploadDocument.addEventListener("change", (e) => {
     reader.readAsText(file);
     reader.onload = (e) => {
       inputTextElem.value = e.target.result;
-      translate();
+      // translate(); //REMOVE AND ADD BUTTON
     };
   } else {
     alert("Please upload a valid file");
@@ -234,3 +234,19 @@ recognization.onresult = (e) => {
 
   recognization.start();
 }
+
+
+// Click on start to call translate
+const startBtn = document.querySelector('.startBtn');
+startBtn.addEventListener("click", ()=> {
+   console.log("Started");
+    translate();
+ });
+
+//RESETTING THE PAGE ON CLICKING THE RELOAD BUTTON
+
+const reload = document.querySelector('.fa-rotate-right');
+reload.addEventListener("click", () => {
+  location.reload(true);
+
+});
