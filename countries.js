@@ -6,31 +6,17 @@ const countries = [
 
    { c1: "be-BY", n1: "Bielarus",},
 
-    {c1: "bem-ZM", n1: "Bemba",},
-
-   { c1: "bi-VU", n1: "Bislama",},
-
-    {c1: "bjs-BB", n1: "Bajan",},
-
    { c1: "bn-IN", n1: "Bengali",},
-
-   { c1: "bo-CN", n1: "Tibetan",},
-
-   { c1: "br-FR", n1: "Breton",},
 
    { c1: "bs-BA", n1: "Bosnian",},
 
    { c1: "ca-ES", n1: "Catalan",},
-
-    {c1: "cop-EG", n1: "Coptic",},
 
    { c1: "cs-CZ", n1: "Czech",},
 
    { c1: "cy-GB", n1: "Welsh",},
 
    { c1: "da-DK", n1: "Danish",},
-
-   { c1: "dz-BT", n1: "Dzongkha",},
 
    { c1: "de-DE", n1: "German",},
 
@@ -49,10 +35,6 @@ const countries = [
    { c1: "fa-IR", n1: "Persian",},
 
    { c1: "fi-FI", n1: "Finnish",},
-
-    {c1: "fn-FNG", n1: "Fanagalo",},
-
-   { c1: "fo-FO", n1: "Faroese",},
 
    { c1: "fr-FR", n1: "French",},
 
@@ -96,8 +78,6 @@ const countries = [
 
    { c1: "lv-LV", n1: "Latvian",},
 
-    {c1: "men-SL", n1: "Mende",},
-
    { c1: "mg-MG", n1: "Malagasy",},
 
    { c1: "mi-NZ", n1: "Maori",},
@@ -110,8 +90,6 @@ const countries = [
 
    { c1: "ne-NP", n1: "Nepali",},
 
-    {c1: "niu-NU", n1: "Niuean",},
-
    { c1: "nl-NL", n1: "Dutch",},
 
    { c1: "no-NO", n1: "Norwegian",},
@@ -120,25 +98,17 @@ const countries = [
 
    { c1: "ur-PK", n1: "Pakistani",},
 
-    {c1: "pau-PW", n1: "Palauan",},
-
    { c1: "pa-IN", n1: "Panjabi",},
 
    { c1: "ps-PK", n1: "Pashto",},
-
-    {c1: "pis-SB", n1: "Pijin",},
 
    { c1: "pl-PL", n1: "Polish",},
 
    { c1: "pt-PT", n1: "Portuguese",},
 
-   { c1: "rn-BI", n1: "Kirundi",},
-
    { c1: "ro-RO", n1: "Romanian",},
 
    { c1: "ru-RU", n1: "Russian",},
-
-   { c1: "sg-CF", n1: "Sango",},
 
    { c1: "si-LK", n1: "Sinhala",},
 
@@ -162,21 +132,13 @@ const countries = [
 
    { c1: "te-IN", n1: "Telugu",},
 
-    {c1: "tet-TL", n1: "Tetum",},
-
    { c1: "tg-TJ", n1: "Tajik",},
 
    { c1: "th-TH", n1: "Thai",},
 
-   { c1: "ti-TI", n1: "Tigrinya",},
-
    { c1: "tk-TM", n1: "Turkmen",},
 
    { c1: "tl-PH", n1: "Tagalog",},
-
-   { c1: "tn-BW", n1: "Tswana",},
-
-   { c1: "to-TO", n1: "Tongan",},
 
    { c1: "tr-TR", n1: "Turkish",},
 
@@ -185,8 +147,6 @@ const countries = [
    { c1: "uz-UZ", n1: "Uzbek",},
 
    { c1: "vi-VN", n1: "Vietnamese",},
-
-   { c1: "wo-SN", n1: "Wolof",},
 
    { c1: "xh-ZA", n1: "Xhosa",},
 
