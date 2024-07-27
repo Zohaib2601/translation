@@ -34,6 +34,7 @@
 body {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #721f0a;
@@ -168,6 +169,34 @@ body.dark {
 .container .center {
   position: relative;
 }
+.startBar{
+  padding: 10px;
+}
+.fa-rotate-right{
+  cursor: pointer;
+  width: 40px;
+  border-radius: 100px;
+  padding: 10px;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: #356aff;
+
+}
+.startBtn{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 75px;
+  border-radius: 100px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: #356aff;
+  
+}
 .swap-position {
   display: flex;
   align-items: center;
@@ -198,6 +227,8 @@ body.dark {
   justify-content: center;
   padding-top: 20px;
   font-weight: bold;
+  color:#963e28;
+
   border-top: 2px solid var(--bg-color);
 }
 .card-bottom p {
