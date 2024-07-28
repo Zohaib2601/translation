@@ -216,7 +216,6 @@ recognization.onresult = (e) => {
    var transcript = e.results[0][0].transcript;
    action.innerHTML = transcript;
    action.classList.remove("hide")
-   output.innerHTML = transcript;
 
   }
   recognization.onerror = (e) => {
