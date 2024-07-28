@@ -134,6 +134,7 @@ downloadBtn.addEventListener("click", (e) => {
   }
 });
 
+
 const inputChars = document.querySelector("#input-chars");
 
 inputTextElem.addEventListener("input", (e) => {
@@ -148,10 +149,13 @@ inputTextElem.addEventListener("input", (e) => {
 //   }
 // }
 
+//TEXT TO SPEECH
 const toText = document.querySelector(".to-text"),
       selected = document.querySelectorAll(".selected"),
       speech = document.querySelector(".speech-output");
-let code = "";
+      let utterance = new SpeechSynthesisUtterance();
+      let code = "";
+      
       function speak(){
         
         for(var i=0; i<countries.length; i++){
@@ -159,44 +163,30 @@ let code = "";
             code = countries[i].c1;
           }
         }
-        utterance = new SpeechSynthesisUtterance(toText.value);
-        utterance.lang = code;
-        speechSynthesis.speak(utterance)
-        
-        console.log(selected[1].innerHTML);
-      }
 
-      // selected[1].innerHTML
+        utterance.text = toText.value;
+        utterance.lang = code;
+        window.speechSynthesis.speak(utterance);
+        // console.log(utterance.text);
+
+        // let utterance = new SpeechSynthesisUtterance(toText.value);
+        // utterance.lang = code;
+        // speechSynthesis.speak(utterance)
+        
+        // console.log(code); // Log selected[1].innerHTML 
+      }
+      // speech.addEventListener("click", speak());
+      
+
 
 //SPEECH TO TEXT
 
-// runSpeechRecog = () => {
-//             document.getElementById("output").innerHTML = "Loading text...";
-//             var action = document.getElementById('input-text');
-
-// let recognization = new webkitSpeechRecognition();
-// recognization.onstart = () => {
-//    action.innerHTML = "Listening...";
-//    }
-// }
-// recognization.onresult = (e) => {
-//    var transcript = e.results[0][0].transcript;
-//    var confidence = e.results[0][0].confidence;
-//    action.innerHTML = transcript;
-//    action.classList.remove("hide")
-//    action.innerHTML = "";
-
-// recognization.start();
-// }
-
-const output = document.getElementById("output-text");
 runSpeechRecog = () => {
-            document.getElementById("output-text").innerHTML = "Loading text...";
-            let output = document.getElementById("output-text");
             let action = document.getElementById("input-text");
+            let output = document.getElementById("output-text");
             let recognization = new webkitSpeechRecognition();
             
-            // Get currently selected language code
+  // Get currently selected language code
 
     // let code = "";
     for (let i = 0; i < countries.length; i++) {
@@ -208,6 +198,7 @@ runSpeechRecog = () => {
     recognization.lang = code;
     
 recognization.onstart = () => {
+  // Clearing the output field
    action.innerHTML = "Listening...";
    }
 
@@ -216,6 +207,7 @@ recognization.onresult = (e) => {
    var transcript = e.results[0][0].transcript;
    action.innerHTML = transcript;
    action.classList.remove("hide")
+  //  output.innerHTML = transcript;
 
   }
   recognization.onerror = (e) => {
@@ -229,12 +221,13 @@ recognization.onresult = (e) => {
 }
 
 
+
 // Click on start to call translate
 const startBtn = document.querySelector('.startBtn');
 startBtn.addEventListener("click", ()=> {
-   console.log("Started");
     translate();
  });
+
 
 //RESETTING THE PAGE ON CLICKING THE RELOAD BUTTON
 
